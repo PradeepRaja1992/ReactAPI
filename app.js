@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost/Dontreact');
 console.log("connect");
 
 app.use('/api/', teamRoute.router);
-//app.use('/api/v1', eventRoute.router);
+app.use('/api/v1', eventRoute.router);
 
 var server = app.listen(3000,function(){
     console.log("We have started our server on port 3000");
