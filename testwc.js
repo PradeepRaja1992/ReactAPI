@@ -11,9 +11,23 @@ var app =  express();
 //var teamRoute = require('./routes/team');
 //var eventRoute = require('./routes/events');
 var Myevent = mongoose.model('events', new Schema({ eventname: String }));
+var Myteam = mongoose.model('teams', new Schema({},{ collection : 'teams' }));
+//var Myteam = new Schema({},{ collection : 'teams' });
 
 mongoose.connect('mongodb://localhost/Dontreact');
 console.log("connect");
+
+app.post('/save',function(req,res){  
+    console.log(req.body);  
+    var payload = req.body;
+    //console.log(json.stringify(payload));
+    //payload['timestamp']= new Date();
+    var agent = new Myteam(payload);
+    agent.save(function(error, result) { /* ... */
+        if(error) return res.status(500).send(error);
+        res.status(200).send(result);
+    });
+});
 
 app.get('/set',function(req,res){    
     Myevent.find({},function(error, result) { /* ... */

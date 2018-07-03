@@ -1,0 +1,116 @@
+/* 1 */
+{
+    "_id" : ObjectId("5b3a27b9caa479cfea4774ef"),
+    "eventid" : 1,
+    "eventname" : "Reactathon",
+    "startdate" : ISODate("2018-06-02T02:21:20.201Z"),
+    "enddate" : ISODate("2018-06-02T02:21:20.201Z"),
+    "winner" : "",
+    "teamcount" : "",
+    "participants" : "",
+    "organiser" : "",
+    "portfolio" : [ 
+        "CMB"
+    ],
+    "stage" : "",
+    "techstack" : "",
+    "desc" : "",
+    "venue" : "",
+    "category" : ""
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5b3a2a18caa479cfea4776e2"),
+    "eventid" : 2,
+    "eventname" : "Testathon",
+    "startdate" : ISODate("2018-03-02T02:21:20.201Z"),
+    "enddate" : ISODate("2018-03-02T02:21:20.201Z"),
+    "winner" : "dont test",
+    "teamcount" : "",
+    "participants" : "",
+    "organiser" : "",
+    "portfolio" : [ 
+        "CMB", 
+        "ENG"
+    ],
+    "stage" : "",
+    "techstack" : "",
+    "desc" : "",
+    "venue" : "",
+    "category" : ""
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5b3a2a8acaa479cfea477709"),
+    "eventid" : 2,
+    "eventname" : "Reactathon",
+    "startdate" : ISODate("2018-06-02T02:21:20.201Z"),
+    "enddate" : ISODate("2018-06-02T02:21:20.201Z"),
+    "winner" : "",
+    "teamcount" : "",
+    "participants" : "",
+    "organiser" : "",
+    "portfolio" : [ 
+        "ENG"
+    ],
+    "stage" : "",
+    "techstack" : "",
+    "desc" : "",
+    "venue" : "",
+    "category" : ""
+}
+
+
+**********************************************************
+teams
+**************************************************************
+
+/* 1 */
+{
+    "_id" : ObjectId("5b3a28e9caa479cfea47754e"),
+    "eventid" : "2",
+    "teamname" : "DontReact",
+    "pocname" : "Arul",
+    "poccontact" : "",
+    "memebers" : [ 
+        {
+            "name" : "Arul",
+            "email" : "dinearul@gmail.com"
+        }, 
+        {
+            "name" : "Ranjith",
+            "email" : "ranjith@test.com"
+        }
+    ],
+    "stage" : "",
+    "level" : "",
+    "badge" : "",
+    "points" : ""
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5b3a3044caa479cfea477965"),
+    "eventid" : "2",
+    "teamname" : "DontReact",
+    "pocname" : "",
+    "poccontact" : "",
+    "memebers" : [ 
+        {
+            "name" : "",
+            "email" : ""
+        }
+    ],
+    "stage" : "",
+    "level" : "",
+    "badge" : "",
+    "points" : ""
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5b3b74f7bdd7e70f28121e2f"),
+    "__v" : 0
+}
