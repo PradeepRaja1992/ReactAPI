@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var request = require('request');
 
 console.log("in team route");
-router.route('/').get(function(req, res, next) {
+router.route('/hello').get(function(req, res) {
     console.log("in team route: hello");
-    res.send('Hello');
+    return res.json('hello!!!!...');
 });
 
-module.exports = router;
+module.exports = {router};
