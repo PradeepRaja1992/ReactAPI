@@ -9,6 +9,8 @@ var teamRoute = require('./routes/team');
 var app =  express();
 console.log("in app js");
 
+mongoose.connect('mongodb://localhost/Dontreact');
+
 app.use('/api/team', teamRoute.router);
 
 app.use(bodyParser.json());

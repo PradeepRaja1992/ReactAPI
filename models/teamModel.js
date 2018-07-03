@@ -5,13 +5,11 @@ var Schema = mongoose.Schema;
 // create a schema
 var teams = new Schema({
   
-},{
-    collection : 'team'
 });
 
 // the schema is useless so far
 // we need to create a model using it
-var teamSchema = mongoose.model('team', teams);
+var teamSchema = mongoose.model('teams', teams);
 
 // make this available to our users in our Node applications
 module.exports = teamSchema;
