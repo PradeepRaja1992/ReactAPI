@@ -10,6 +10,48 @@ router.route('/hi').get(function(req, res) {
     return res.json('hello!!!!...');
 });
 
+router.route('/findEvents').get(function(req, res) {
+    var data =req.query; 
+    var arr = [];
+    
+    if(data['portfolio']){
+        var n = data['portfolio'].includes(",");
+
+        if (n == true){
+            arr = data['portfolio'].split(",");
+            console.log("arr is - "+arr);
+        } else {
+            arr.push(data['portfolio']);
+        }
+    }
+    var match = {"$match":{}};
+    
+    if(data['stDt']) {
+        console.log("stDt" + data['stDt']);
+        match['$match']['startdate'] = {$gte: new Date(data['stDt'])};
+    }
+    if(data['edDt']) {
+        console.log("edDt" + data['edDt']);
+        match['$match']['enddate'] = {$gte: new Date(data['edDt'])};
+    }
+    if(data['portfolio']) {
+        console.log("portfolio" + data['portfolio']);
+        match['$match']['portfolio'] =  {$in: arr };
+    }    
+
+    var query = eventModel.aggregate([match]);
+
+    console.log("qry: " + JSON.stringify(query));
+    query.allowDiskUse(true).exec(function (error, result) { /* ... */
+        if (error) {
+            console.log(error);
+        }        
+        console.log('result: ' + result);
+        return res.json(result);
+    });
+    
+});
+
 router.route('/findeve1').get(function(req, res) {
     var data =req.query; var arr = [];
     console.log("stDt"+data['stDt'] + " --- "+ "edDt"+data['edDt']+ " --- "+ "portfolio - "+ data['portfolio']);
