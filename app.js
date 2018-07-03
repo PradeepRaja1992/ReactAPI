@@ -5,6 +5,7 @@ var router = express.Router();
 var Schema = mongoose.Schema;
 
 var teamRoute = require('./routes/team');
+var eventRoute = require('./routes/events');
 
 var app =  express();
 console.log("in app js");
@@ -12,6 +13,7 @@ console.log("in app js");
 mongoose.connect('mongodb://localhost/Dontreact');
 
 app.use('/api/team', teamRoute.router);
+app.use('/api/event', eventRoute.router);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
