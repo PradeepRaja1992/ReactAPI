@@ -42,4 +42,22 @@ router.route('/registerTeam').post(function(req, res) {
     });        
 });
 
+router.route('/orgwiseCount').get(function(req, res) {
+    var match = {"$match":{}};
+
+    var query = teamSchema.aggregate([match,
+        { $unwind : "$members" }, 
+        { $group : {"_id" : "$members.portfolio", "count": { "$sum": 1 }}}    
+    ]);
+
+    console.log("qry: " + JSON.stringify(query));
+    query.allowDiskUse(true).exec(function (error, result) { /* ... */
+        if (error) {
+            console.log(error);
+        }        
+        console.log('result: ' + result);
+        return res.json(result);
+    });    
+});
+
 module.exports = {router};
