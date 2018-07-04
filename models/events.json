@@ -114,3 +114,196 @@ teams
     "_id" : ObjectId("5b3b74f7bdd7e70f28121e2f"),
     "__v" : 0
 }
+
+/* events.json */
+{
+    "_id" : ObjectId("5b3b78f9519ce9f49199b373"),
+    "eventid" : "HackR0",
+    "eventname" : "Reactathon",
+    "startdate" : ISODate("2018-07-05T02:21:20.201Z"),
+    "enddate" : ISODate("2018-07-08T02:21:20.201Z"),
+    "winner" : "",
+    "teamcount" : "2",
+    "participants" : "8",
+    "organiser" : [ 
+        "Ranjith", 
+        "Pradeep"
+    ],
+    "portfolio" : [ 
+        "NTS"
+    ],
+    "stage" : "",
+    "techstack" : [ 
+        "reactjs", 
+        "express.js", 
+        "node.js", 
+        "mongoDB"
+    ],
+    "desc" : "This Program to improve devops skills and also to find best solution for our business",
+    "venue" : [ 
+        "OTP,chennai", 
+        "RMZ,chennai", 
+        "ORION, hbd", 
+        "TITUS,hbd"
+    ],
+    "category" : "Develop"
+}
+
+{
+    "_id" : ObjectId("5b3b7955519ce9f49199b38a"),
+    "eventid" : "HackR1",
+    "eventname" : "Reactathon",
+    "startdate" : ISODate("2018-06-05T02:21:20.201Z"),
+    "enddate" : ISODate("2018-06-08T02:21:20.201Z"),
+    "winner" : "",
+    "teamcount" : "3",
+    "participants" : "12",
+    "organiser" : [ 
+        "Ramesh", 
+        "Arul"
+    ],
+    "portfolio" : [ 
+        "CMB"
+    ],
+    "stage" : "",
+    "techstack" : [ 
+        "reactjs", 
+        "express.js", 
+        "node.js", 
+        "mongoDB"
+    ],
+    "desc" : "This Program to improve devops skills and also to find best solution for our business",
+    "venue" : [ 
+        "OTP,chennai", 
+        "RMZ,chennai", 
+        "ORION, hbd", 
+        "TITUS,hbd"
+    ],
+    "category" : "Develop"
+}
+
+{
+    "_id" : ObjectId("5b3b7a05519ce9f49199b3aa"),
+    "eventid" : "HackT1",
+    "eventname" : "Testathon",
+    "startdate" : ISODate("2018-06-26T02:21:20.201Z"),
+    "enddate" : ISODate("2018-06-30T02:21:20.201Z"),
+    "winner" : "",
+    "teamcount" : "2",
+    "participants" : "8",
+    "organiser" : [ 
+        "Mansoor", 
+        "Arul"
+    ],
+    "portfolio" : [ 
+        "VES"
+    ],
+    "stage" : "",
+    "techstack" : [ 
+        "RPA", 
+        "Selenium", 
+        "QTP", 
+        "manual"
+    ],
+    "desc" : "This Program to spot errors/issues from existing system applications",
+    "venue" : [ 
+        "OTP,chennai", 
+        "RMZ,chennai", 
+        "ORION, hbd", 
+        "TITUS,hbd"
+    ],
+    "category" : "Develop"
+}
+
+/* teams.json*/
+
+{
+    "_id" : ObjectId("5b3b7af7519ce9f49199b3dc"),
+    "eventid" : "HackR0",
+    "teamname" : "DontReact",
+    "pocname" : "Arul",
+    "poccontact" : "8870988069",
+    "memebers" : [ 
+        {
+            "name" : "Arul",
+            "email" : "dinearul@gmail.com"
+        }, 
+        {
+            "name" : "Ranjith",
+            "email" : "ranjith@test.com"
+        }, 
+        {
+            "name" : "Ramesh",
+            "email" : "ramesh@test.com"
+        }, 
+        {
+            "name" : "Pradeep",
+            "email" : "Pradeep@test.com"
+        }
+    ],
+    "stage" : "",
+    "level" : "",
+    "badge" : "",
+    "points" : ""
+}
+
+
+{
+    "_id" : ObjectId("5b3b7af7519ce9f49199b3de"),
+    "eventid" : "HackR1",
+    "teamname" : "Hackers",
+    "pocname" : "Ramesh1",
+    "poccontact" : "8870998069",
+    "memebers" : [ 
+        {
+            "name" : "Arul1",
+            "email" : "dinearul1@gmail.com"
+        }, 
+        {
+            "name" : "Ramesh1",
+            "email" : "ranjith1@test.com"
+        }, 
+        {
+            "name" : "Ramesh1",
+            "email" : "ramesh1@test.com"
+        }, 
+        {
+            "name" : "Pradeep1",
+            "email" : "Pradeep1@test.com"
+        }
+    ],
+    "stage" : "",
+    "level" : "",
+    "badge" : "",
+    "points" : ""
+}
+
+{
+    "_id" : ObjectId("5b3b7b79519ce9f49199b407"),
+    "eventid" : "HackT0",
+    "teamname" : "Encrypters",
+    "pocname" : "Pradeep",
+    "poccontact" : "2134567896",
+    "memebers" : [ 
+        {
+            "name" : "Arul2",
+            "email" : "dinearul2@gmail.com"
+        }, 
+        {
+            "name" : "Ranjith2",
+            "email" : "ranjith2@test.com"
+        }, 
+        {
+            "name" : "Ranjith3",
+            "email" : "ranjith3@test.com"
+        }, 
+        {
+            "name" : "Ranjith4",
+            "email" : "ranjith4@test.com"
+        }
+    ],
+    "stage" : "",
+    "level" : "",
+    "badge" : "",
+    "points" : ""
+}
