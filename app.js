@@ -10,7 +10,7 @@ var eventRoute = require('./routes/events');
 var app =  express();
 console.log("in app js");
 
-mongoose.connect('mongodb://10.74.17.199/Dontreact');
+mongoose.connect('mongodb://10.74.17.199:27107/Dontreact');
 
 app.use(function(req, res, next){
     res.header("Access-Control-Allow-Origin","*");

@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 //var eventRoute = require('./routes/events');
 var Myevent = mongoose.model('events', new Schema({ eventname: String }));
 //var Myteam = mongoose.model('teams', new Schema({teamname: String, pocname: String},{ collection : 'teams' }));
-var Myteam = mongoose.model('teams', new Schema({teamname: String, mobile: String, email: String, teamsize: String, pocname: String,memebers:[{name: String,portfolio: String}]},{ collection : 'teams' }));
+var Myteam = mongoose.model('teams', new Schema({teamname: String, mobile: String, email: String, teamsize: String, pocname: String,members:[{name: String,portfolio: String}]},{ collection : 'teams' }));
 //var Myteam = new Schema({},{ collection : 'teams' });
 
 mongoose.connect('mongodb://localhost/Dontreact');
