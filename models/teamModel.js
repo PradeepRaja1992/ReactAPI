@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 // create a schema
 var teams = new Schema({
   
-});
+}, { strict: false });
 
 // the schema is useless so far
 // we need to create a model using it

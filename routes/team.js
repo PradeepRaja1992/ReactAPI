@@ -27,4 +27,19 @@ router.route('/teams').get(function(req, res) {
     });
 });
 
+router.route('/registerTeam').post(function(req, res) {
+    console.log("register team " + JSON.stringify(req.body));
+    var data = req.body;
+    console.log("register team " + JSON.stringify(data));
+    var query = {"eventid":data['eventid']};
+    console.log("query: " + JSON.stringify(query));
+    teamSchema.findOneAndUpdate({"eventid":"3"}, { "$set": {"eventid":"3","teamname":"Reactive","pocname":"Pradeep R","members":[{"name":"Ramesh","portfolio":"CAO"},{"name":"Mansoor","portfolio":"NTS"}],"teamsize":3}}, {new: true, upsert: true}, function(err, doc){
+        if(err){
+            console.log("Error, please try after sometime : " + err);
+            return res.json("error");
+        }
+        return res.json("success");
+    });        
+});
+
 module.exports = {router};

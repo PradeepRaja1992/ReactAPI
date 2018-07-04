@@ -18,11 +18,11 @@ app.use(function(req, res, next){
     next();
 });
 
-app.use('/api/team', teamRoute.router);
-app.use('/api/event', eventRoute.router);
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+
+app.use('/api/team', teamRoute.router);
+app.use('/api/event', eventRoute.router);
 
 var server = app.listen(3000,function(){
     console.log("We have started our server on port 3000");
