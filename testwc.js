@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 //var teamRoute = require('./routes/team');
 //var eventRoute = require('./routes/events');
 var Myevent = mongoose.model('events', new Schema({ eventname: String }));
-var Myteam = mongoose.model('teams', new Schema({teamname: String, pocname: String},{ collection : 'teams' }));
+//var Myteam = mongoose.model('teams', new Schema({teamname: String, pocname: String},{ collection : 'teams' }));
+var Myteam = mongoose.model('teams', new Schema({teamname: String, mobile: String, email: String, teamsize: String, pocname: String,memebers:[{name: String,portfolio: String}]},{ collection : 'teams' }));
 //var Myteam = new Schema({},{ collection : 'teams' });
 
 mongoose.connect('mongodb://localhost/Dontreact');
@@ -22,7 +23,7 @@ console.log("connect");
 app.post('/save',function(req,res){  
     console.log(req.body);  
     var payload = req.body;
-    //console.log(json.stringify(payload));
+    console.log(json.stringify(payload));
     payload['timestamp']= new Date();
     var agent = new Myteam(payload);
     //console.log(payload);
@@ -58,6 +59,7 @@ app.get('/distEvents',function(req,res){
 
 app.get('/findEvents',function(req,res){
     var data =req.query; var arr = [];
+    if(data['stDt'] != undefined) {
     console.log("stDt"+data['stDt'] + " --- "+ "edDt"+data['edDt']+ " --- "+ "portfolio - "+ data['portfolio']);
     var n = data['portfolio'].includes(",");
     if (n == true){
@@ -66,8 +68,6 @@ app.get('/findEvents',function(req,res){
     } else {
         arr.push(data['portfolio']);
     }
-    if(data['stDt']) {
-
         Myevent.find({portfolio : {$in: arr } , startdate : {$gte: new Date(data['stDt'])}, enddate : {$lte: new Date(data['edDt'])}},function(error, result) { /* ... */
             //console.log(result);
             console.log({portfolio : {$in: arr }  ,startdate : {$gte: new Date(data['stDt'])}, enddate : {$lte: new Date(data['edDt'])} });
